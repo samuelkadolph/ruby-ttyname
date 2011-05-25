@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Samuel Kadolph"]
   s.email       = ["samuel@kadolph.com"]
   s.homepage    = "https://github.com/samuelkadolph/ruby-ttyname"
-  s.summary     = %q{ruby-ttyname is a small library that lets get the name of a tty device.}
-  s.description = %q{ruby-ttyname adds one method (ttyname) for use with any IO instance for a TTY device.}
+  s.summary     = %q{ttyname is a small library that lets get the name of a tty device.}
+  s.description = %q{ttyname adds one method (ttyname) that returns the name of the tty device of an IO instance.}
 
   s.files      = Dir["{ext,lib}/**/*"] + ["LICENSE", "README.md"]
   s.extensions = ["ext/extconf.rb"]

@@ -1,9 +1,9 @@
-# ruby-ttyname
+# ttyname
 
-ruby-ttyname is a small library that lets get the name of a tty device.
+ttyname is a small library that lets get the name of a tty device.
 
-ruby-ttyname adds one method (`ttyname`) for use with any `IO` instance for a
-TTY device.
+ttyname adds one method (`ttyname`) that returns the name of the tty device of
+an `IO` instance.
 
 ## Installing
 
