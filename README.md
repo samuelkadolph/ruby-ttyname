@@ -1,6 +1,6 @@
 # ttyname
 
-ttyname is a small library that lets get the name of a tty device.
+ttyname is a small library that lets you get the name of a tty device.
 
 ttyname adds one method (`ttyname`) that returns the name of the tty device of
 an `IO` instance.
