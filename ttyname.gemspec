@@ -1,16 +1,20 @@
-$:.push File.expand_path("../lib", __FILE__)
-require "ttyname/version"
+require File.expand_path("../.gemspec", __FILE__)
+require File.expand_path("../lib/ttyname/version", __FILE__)
 
-Gem::Specification.new do |s|
-  s.name        = "ttyname"
-  s.version     = TTYName::VERSION
-  s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Samuel Kadolph"]
-  s.email       = ["samuel@kadolph.com"]
-  s.homepage    = "https://github.com/samuelkadolph/ruby-ttyname"
-  s.summary     = %q{ttyname is a small library that lets you get the name of a tty device.}
-  s.description = %q{ttyname adds one method (ttyname) that returns the name of the tty device of an IO instance.}
+Gem::Specification.new do |gem|
+  gem.name        = "ttyname"
+  gem.authors     = ["Samuel Kadolph"]
+  gem.email       = ["samuel@kadolph.com"]
+  gem.description = readme.description
+  gem.summary     = readme.summary
+  gem.homepage    = "http://samuelkadolph.github.com/ruby-ttyname/"
+  gem.version     = TTYName::VERSION
 
-  s.files      = Dir["{ext,lib}/**/*"] + ["LICENSE", "README.md"]
-  s.extensions = ["ext/extconf.rb"]
+  gem.files       = Dir["ext/**/*", "lib/**/*"]
+  gem.extensions  = Dir["ext/extconf.rb"]
+
+  gem.required_ruby_version = ">= 1.9.2"
+
+  gem.add_development_dependency "mocha", "~> 0.12.1"
+  gem.add_development_dependency "rake", "~> 0.9.2.2"
 end
